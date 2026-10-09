@@ -6,6 +6,24 @@
     <title>Document</title>
 </head>
 <body>
+    <header class="accueilHeader">
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="./pages/Pokemon.php">Pokemon</a>
+                </li>  
+                <li>
+                    <a href="./pages/Magic.php">Magic</a>
+                </li>
+                <li>
+                   <a href="./pages/Yugioh.php">Yu-Gi-Oh!</a> 
+                </li>
+                <li>
+                    <a href="./pages/wankul.php">Wankul</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <?php
     $bdd = "mpinkowski_bd"; // Base de données
     $host = "lakartxela.iutbayonne.univ-pau.fr";
