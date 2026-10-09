@@ -22,11 +22,11 @@
             $categorie = $donnees['ProjetCategorie'];
 
             if ($categorie == $cate) {
-            echo '<li> <img src="../'. $photo .'" alt="caca"> <br>' .
-                '<p class = "nomBooster"> Nom du booster : ' . $libelle . '</p> <br>' . 
-                 $description . '<br>' .
-                 '<p class = "prixBooster"> Prix du booster : ' . $prix . ' € </p> <br>' .  
-                 $categorie . '<br> </li>';
+            echo '<li class= "item"> <img src="../'. $photo .'" alt="'.$photo.'"> <ul> <br>' .
+                '<li><p class = "nomBooster"> Nom du booster : ' . $libelle . '</p></li> ' . 
+                 '<li><p class = "description">'. $description . '</li></p>' .
+                 '<li><p class = "prixBooster"> Prix du booster : ' . $prix . ' € </p> ' .  
+                 ' </ul> </li>';
             echo '<br>';
         }
         }  
