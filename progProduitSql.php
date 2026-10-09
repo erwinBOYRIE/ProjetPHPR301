@@ -9,10 +9,10 @@
         //print "Tentative de connexion sur sitebd<br>";
 
         $link=mysqli_connect($host,$user,$pass,$bdd) or die( "Impossible de se connecter à la base de données");
+        $link->set_charset("utf8mb4");
 
         $query= "SELECT * FROM $nomtable";
         $result= mysqli_query($link, $query);
-        $link->set_charset("utf8");
 
         while ($donnees=mysqli_fetch_assoc($result)) {
             $libelle = $donnees['ProjetLibelle'];
@@ -25,8 +25,7 @@
             echo '<li> <img src="../'. $photo .'" alt="caca"> <br>' .
                 '<p class = "nomBooster"> Nom du booster : ' . $libelle . '</p> <br>' . 
                  $description . '<br>' .
-                 '<p class = "prixBooster"> Prix du booster : ' . $prix . ' € </p> <br>' .  
-                 $categorie . '<br> </li>';
+                 '<p class = "prixBooster"> Prix du booster : ' . $prix . ' € </p> <br>';
             echo '<br>';
         }
         }  
