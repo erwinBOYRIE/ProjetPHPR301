@@ -11,6 +11,9 @@
         <nav class="navbar">
             <ul>
                 <li>
+                    <a href="../index.php">Accueil</a>
+                </li>
+                <li>
                     <a href="./Pokemon.php">Pokemon</a>
                 </li>  
                 <li>
@@ -25,9 +28,11 @@
             </ul>
         </nav>
     </header>
-    <?php
-        include_once('../progProduitSql.php');
-        sql('yugioh');
-    ?>
+    <ul class = "listeItems">
+        <?php
+            include_once('../progProduitSql.php');
+            sql('yugioh');
+        ?>
+    </ul>
 </body>
 </html>

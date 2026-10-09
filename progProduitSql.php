@@ -22,40 +22,14 @@
             $categorie = $donnees['ProjetCategorie'];
 
             if ($categorie == $cate) {
-            echo 'Nom du booster : ' . $libelle . '<br>' . 
+            echo '<li> <img src="../'. $photo .'" alt="caca"> <br>' .
+                '<p class = "nomBooster"> Nom du booster : ' . $libelle . '</p> <br>' . 
                  $description . '<br>' .
-                 'Prix du booster : ' . $prix . '<br>' .  
-                 $photo . '<br>' .
-                 $categorie . '<br>';
+                 '<p class = "prixBooster"> Prix du booster : ' . $prix . ' € </p> <br>' .  
+                 $categorie . '<br> </li>';
             echo '<br>';
         }
         }  
     }
-    /*
-    $bdd = "mpinkowski_bd"; // Base de données
-        $host = "lakartxela.iutbayonne.univ-pau.fr";
-        $user = "mpinkowski_bd"; // Utilisateur
-        $pass = "mpinkowski_bd"; // mp
-        $nomtable = "ProjetR301_Produit"; //Connection bdd
-        $link = mysqli_connect($host, $user, $pass, $bdd) or die("Impossible de se connecter à la base de
-        données");
-
-        $sql = "SELECT * FROM $nomtable";
-        $result = mysqli_query($link, $sql);
-        while ($donnees = mysqli_fetch_assoc($result)) {
-            $libelle = $donnees['ProjetLibelle'];
-            $description = $donnees['ProjetDescription'];
-            $prix = $donnees['ProjetPrix'];
-            $photo = $donnees['ProjetPhoto'];
-            $categorie = $donnees['ProjetCategorie'];
-            if ($categorie == 'pokemon') {
-                echo 'Nom du booster : ' . $libelle . '<br>' . 
-                    $description . '<br>' .
-                    'Prix du booster : ' . $prix . '<br>' .  
-                    $photo . '<br>' .
-                    $categorie . '<br>';
-                echo '<br>';
-            }
-        }
-        */
+   
 ?>
