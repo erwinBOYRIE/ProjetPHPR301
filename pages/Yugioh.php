@@ -31,6 +31,7 @@
     <ul class = "listeItems">
         <?php
             include_once('../progProduitSql.php');
+            include_once('../progReImage.php');
             sql('yugioh');
         ?>
     </ul>
