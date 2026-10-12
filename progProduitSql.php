@@ -1,9 +1,9 @@
 <?php
     function sql ($cate) {
-        $bdd= "mpinkowski_bd";
+        $bdd= "mpinkowski_bd"; //nom bd
         $host= "lakartxela.iutbayonne.univ-pau.fr";
-        $user= "mpinkowski_bd";
-        $pass= "mpinkowski_bd";
+        $user= "mpinkowski_bd"; //identifiant
+        $pass= "mpinkowski_bd"; //mdp
 
         $nomtable= "ProjetR301_Produit"; /* Connection bdd */
         //print "Tentative de connexion sur sitebd<br>";
