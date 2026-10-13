@@ -21,5 +21,10 @@ li{
     display: flex;
     align-items: center;
     background-color: rgb(228, 228, 228);
+    color: #333;
 }
+a{
+    text-decoration: none;   
+}
+
 
