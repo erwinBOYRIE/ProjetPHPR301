@@ -27,4 +27,12 @@ a{
     text-decoration: none;   
 }
 
+ table {     
+    table-layout: fixed;     
+    border: 2px solid black; 
+}  
 
+td {     
+    border : 2px solid gray;     
+    padding : 5px; 
+}
