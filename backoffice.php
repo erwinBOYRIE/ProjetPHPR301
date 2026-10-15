@@ -1,26 +1,86 @@
-<?php
-    // On definit un login et un mot de passe de base
-    $login_valide = "admin";
-    $pwd_valide = "adminpwd";
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>AjoutProd</title>
+</head>
+<body>
+    <h2>Liste des produits</h2>
+    <?php 
+        echo "<table>
+            <thead>
+                <tr>
+                    <th scope=\"col\">Image</th>
+                    <th scope=\"col\">Image 2</th>
+                    <th scope=\"col\">Nom</th>
+                    <th scope=\"col\">Description</th>
+                    <th scope=\"col\">Catégorie</th>
+                    <th scope=\"col\">Prix</th>
+                    <th scope=\"col\">Supprimer un produit ?</th>
+                </tr>
+            </thead>
+            <tbody>";
 
-    // on teste si nos variables sont definies
-    if (isset($_POST['login']) && isset($_POST['pwd'])) {
-    // on verifie les informations saisies
-        if ($login_valide == $_POST['login'] && $pwd_valide == $_POST['pwd']) {
-            session_start ();
-            // on enregistre les parametres de notre visiteur comme variables de session ($login et $pwd) (
-            $_SESSION['login'] = $_POST['login'];
-            $_SESSION['pwd'] = $_POST['pwd'];
-            // on redirige notre visiteur vers une page de notre section membre
-            header ('location: ');
+        //connexion bd
+        $bdd= "mpinkowski_bd"; //nom bd
+        $host= "lakartxela.iutbayonne.univ-pau.fr";
+        $user= "mpinkowski_bd"; //identifiant
+        $pass= "mpinkowski_bd"; //mdp
+        include_once('./progReImage.php');
+
+        $nomtable= "ProjetR301_Produit"; /* Connection bdd */
+        //print "Tentative de connexion sur sitebd<br>";
+
+        $link=mysqli_connect($host,$user,$pass,$bdd) or die( "Impossible de se connecter à la base de données");
+        $link->set_charset("utf8mb4");
+
+        $query= "SELECT * FROM $nomtable";
+        $result= mysqli_query($link, $query);
+
+        while ($donnees=mysqli_fetch_assoc($result)) {
+            $libelle = $donnees['ProjetLibelle'];
+            $description = $donnees['ProjetDescription'];
+            $prix = $donnees['ProjetPrix'];
+            $image = $donnees['ProjetPhoto'];
+            $image2 = $donnees['ProjetPhoto2'];
+            $categorie = $donnees['ProjetCategorie'];
+            $monimage1 = "." . $image . "_edited.jpg";
+            $monimage2 = "." . $image2 . "_edited.jpg";
+            echo"<tr>
+                    <td scope=\"row\"><img src='$monimage1' alt='$monimage1'></td>
+                    <td><img src='$monimage2' alt='$monimage2'></td>
+                    <td>$libelle</td>
+                    <td>$description</td>
+                    <td>$categorie</td>
+                    <td>$prix €</td>
+                    <td><input type=\"submit\" id =\"btn-supprimer\" value=\"Supprimer\"></td>
+                </tr>";
+
         }
-        else {
-            echo '<body onLoad="alert(\'Membre non reconnu...\')">';
-            // puis on le redirige vers la page d'accueil
-            echo '<meta http-equiv="refresh" content="0;URL=index.html">';
-        }
-    } 
-    else {
-    echo 'Les variables du formulaire ne sont pas declarees.';
-    }
-?>
+        echo "</tbody>
+        </table>" ;
+    
+    ?>
+    
+    <h2>Ajouter des produits</h2>
+    <form action="./ajout_prod.php" method="POST">
+        <label>Nom du produit : </label>
+        <input name="nom" type="text"> <br>
+        <label>Description du produit : </label>
+        <input name="desc" type="text"> <br>
+        <label>Prix du produit : </label>
+        <input name="prix" type="number"> <br>
+        <label>Categorie du produit : </label>
+        <input name="cath" type="text"> <br>
+        <label>Photo 1 du produit : </label>
+        <input name="photo1" type="text"> <br>
+        <label>Photo 2 du produit : </label>
+        <input name="photo2" type="text"> <br>
+        <input type="submit" value="Validez">
+    </form>
+    <br>
+    <a href="./connexion.html">Déconnexion</a>
+</body>
+</html>
