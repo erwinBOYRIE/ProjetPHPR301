@@ -55,7 +55,12 @@
                     <td>$description</td>
                     <td>$categorie</td>
                     <td>$prix €</td>
-                    <td><input type=\"submit\" id =\"btn-supprimer\" value=\"Supprimer\"></td>
+                    <td>
+                        <form method=\"POST\" action=\"./suppr_prod.php\">
+                            <input type=\"hidden\" name=\"lib_produit\" value='$libelle'>
+                            <button type=\"submit\">Supprimer</button>
+                        </form>
+                    </td>
                 </tr>";
 
         }
@@ -81,6 +86,6 @@
         <input type="submit" value="Validez">
     </form>
     <br>
-    <a href="./connexion.html">Déconnexion</a>
+    <a href="./logout.php">Déconnexion</a>
 </body>
 </html>
