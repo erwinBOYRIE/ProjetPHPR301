@@ -19,20 +19,26 @@
         $result= mysqli_query($link, $query);
 
         while ($donnees=mysqli_fetch_assoc($result)) {
+            $libelle = $donnees['ProjetLibelle'];
             $prix = $donnees['ProjetPrix'];
             $image = $donnees['ProjetPhoto'];
             $image2 = $donnees['ProjetPhoto2'];
+            $monimage1 = "." . $image . "_edited2.jpg";
+            $monimage2 = "." . $image2 . "_edited2.jpg";
 
-            //array_push($tabDonnee, $image, $image2, $prix);
-
-            if (array_key_exists($_SESSION['listePanier'][$lib], $_SESSION['listePanier'])) {
-                $_SESSION['listePanier']['lib'] += 1;
+            if (isset($_SESSION['listePanier'][$lib])) {
+                $_SESSION['listePanier'][$lib]['quantite'] += 1;
             }
             else {
-                $_SESSION['listePanier'][$lib] = 1;
+                $_SESSION['listePanier'][$lib] = array(
+                    'libelle'=> $libelle,
+                    'image' => $monimage1,
+                    'image2' => $monimage2,
+                    'prix' => $prix,
+                    'quantite' => 1,
+                );
             }
 
-            // $_SESSION['listePanier'][$lib] = $tabDonnee;
         }
         echo '<body onLoad="alert(\'Produit ajouté au panier !\')">';
         echo '<meta http-equiv="refresh" content="0;URL=afficher_panier.php">';
