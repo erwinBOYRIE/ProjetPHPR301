@@ -8,6 +8,7 @@
 </head>
 <body>
     <header class="accueilHeader">
+        <h1>Achetez Vos Booster !</h1>
         <nav class="navbar">
             <ul>
                 <li>
@@ -24,6 +25,9 @@
                 </li>
                 <li>
                     <a href="./wankul.php">Wankul</a>
+                </li>
+                <li>
+                    <a href="#">Panier</a>
                 </li>
             </ul>
         </nav>

@@ -56,14 +56,17 @@
                 
                
 
-
+                //affichage sur la page
                 echo '<a href="./'.$libelle.'.html">
                     <li class= "item"> <img src="'. $imageDest .'" alt="'.$imageDest.'">
                     <ul> <br>' .
                     '<li><p class = "nomBooster"> Nom du booster : ' . $libelle . '</p></li> ' . 
                     '<li><p class = "prixBooster"> Prix du booster : ' . $prix . ' € </p> ' .  
                     ' </ul> </li>
-                    </a>';
+                    </a>
+                    <ul> 
+                        <li>Ajouter au panier <button type=\"submit\">Ajout</button></li>
+                    </ul>';
                 echo '<br>';
         }
         }
