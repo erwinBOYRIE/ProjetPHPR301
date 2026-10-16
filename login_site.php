@@ -1,7 +1,7 @@
 <?php
     // On definit un login et un mot de passe de base
-    $login_valide = "admin";
-    $pwd_valide = "adminpwd";
+    $login_valide = "user";
+    $pwd_valide = "userpwd";
 
     // on teste si nos variables sont definies
     if (isset($_POST['login']) && isset($_POST['pwd'])) {
@@ -12,12 +12,12 @@
             $_SESSION['login'] = $_POST['login'];
             $_SESSION['pwd'] = $_POST['pwd'];
             // on redirige notre visiteur vers une page de notre section membre
-            header ('location: backoffice.php');
+            header ('location: index.php');
         }
         else {
-            echo '<body onLoad="alert(\'Membre non reconnu...\')">';
+            echo '<body onLoad="alert(\'Login ou mot de passe incorrect !\')">';
             // puis on le redirige vers la page d'accueil
-            echo '<meta http-equiv="refresh" content="0;URL=connexion.html">';
+            echo '<meta http-equiv="refresh" content="0;URL=accueil.html">';
         }
     } 
     else {

@@ -29,5 +29,7 @@
             </ul>
         </nav>
     </header>   
+    <!-- pas encore le bon logout -->
+    <a href="logout.php">Déconnexion</a>
 </body>
 </html>
