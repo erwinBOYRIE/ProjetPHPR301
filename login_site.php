@@ -11,6 +11,7 @@
             // on enregistre les parametres de notre visiteur comme variables de session ($login et $pwd) (
             $_SESSION['login'] = $_POST['login'];
             $_SESSION['pwd'] = $_POST['pwd'];
+            $_SESSION['listePanier'] = array();
             // on redirige notre visiteur vers une page de notre section membre
             header ('location: index.php');
         }
