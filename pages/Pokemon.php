@@ -26,9 +26,7 @@
                 <li>
                     <a href="./wankul.php">Wankul</a>
                 </li>
-                <li>
-                    <a href="../afficher_panier.php">Panier</a>
-                </li>
+
             </ul>
         </nav>
     </header>
@@ -39,5 +37,7 @@
             sql('pokemon');
         ?>
     </ul>
+    <a href="../afficher_panier.php" class='btn-fixe' > Panier</a>
+    
 </body>
 </html>

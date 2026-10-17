@@ -23,13 +23,15 @@
                 <li>
                     <a href="./pages/wankul.php">Wankul</a>
                 </li>
-                <li>
-                    <a href="./afficher_panier.php">Panier</a>
-                </li>
+                
             </ul>
         </nav>
     </header>   
+    <a href="./afficher_panier.php" class='btn-fixe' > Panier</a>
+
+    <?php
     <!-- pas encore le bon logout -->
     <a href="logout.php">Déconnexion</a>
+    ?>
 </body>
 </html>
