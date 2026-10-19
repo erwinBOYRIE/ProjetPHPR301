@@ -25,14 +25,16 @@
                             <td>' . $valeur['libelle'] . '</td>
                             <td>' . $valeur['prix'] . '</td>
                             <td> ' . $valeur['quantite'] . '</td>
-                            <td><form method="POST"><input type="number" name="quantite" id="quantitePro">
-                                <
+                            <td><form method="POST">
+                                    <input type="number" name="quantite" id="quantitePro">
+                                    <input type="submit" name="quantiteValidez">
+                                </form>
                             </td>
                         </tr>';
                 }
         echo "</tbody> </table>";
         echo "<form action=\"paiement.php\" method=\"POST\">
-                <input type=\"submit\" name=\"\" id=\"\">
+                <input type=\"submit\" name=\"paiement\">
               </form>";
     }
     else {
