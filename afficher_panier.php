@@ -5,7 +5,7 @@
     echo "<h2>Votre panier </h2>";
     echo "<a href=\"./index.php\">Retour à l'accueil</a> <br>";
 
-    if (!empty($_SESSION['listePanier'])) {
+    if (!empty($panier)) {
         echo "<table>
                 <thead>
                     <tr>
@@ -14,6 +14,7 @@
                         <th scope=\"col\">Libelle</th>
                         <th scope=\"col\">Prix</th>
                         <th scope=\"col\">Quantité</th>
+                        <th scope=\"col\">Modifier la quantité</th>
                     </tr>
                 </thead>
                 <tbody>";
@@ -24,9 +25,15 @@
                             <td>' . $valeur['libelle'] . '</td>
                             <td>' . $valeur['prix'] . '</td>
                             <td> ' . $valeur['quantite'] . '</td>
+                            <td><form method="POST"><input type="number" name="quantite" id="quantitePro">
+                                <
+                            </td>
                         </tr>';
                 }
         echo "</tbody> </table>";
+        echo "<form action=\"paiement.php\" method=\"POST\">
+                <input type=\"submit\" name=\"\" id=\"\">
+              </form>";
     }
     else {
         echo "Votre panier est vide.";

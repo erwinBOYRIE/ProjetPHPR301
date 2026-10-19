@@ -8,8 +8,6 @@
         $host= "lakartxela.iutbayonne.univ-pau.fr";
         $user= "mpinkowski_bd"; //identifiant
         $pass= "mpinkowski_bd"; //mdp
-        // include_once('../progReImage.php');
-        // include_once('../progCreationPage.php');
         $nomtable= "ProjetR301_Produit"; /* Connection bdd */
 
         $link=mysqli_connect($host,$user,$pass,$bdd) or die( "Impossible de se connecter à la base de données");
