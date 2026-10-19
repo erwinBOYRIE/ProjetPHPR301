@@ -41,7 +41,7 @@
 
         }
         echo '<body onLoad="alert(\'Produit ajouté au panier !\')">';
-        echo '<meta http-equiv="refresh" content="0;URL=afficher_panier.php">';
+        echo '<meta http-equiv="refresh" content="0;URL=' . $_SERVER['HTTP_REFERER'] . '">';
 
         mysqli_close($link);
     }
