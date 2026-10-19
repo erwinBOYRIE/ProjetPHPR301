@@ -66,6 +66,8 @@
         }
         echo "</tbody>
         </table>" ;
+
+        mysqli_close($link);
     
     ?>
     

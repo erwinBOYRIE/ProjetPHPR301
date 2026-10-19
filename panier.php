@@ -23,8 +23,8 @@
             $prix = $donnees['ProjetPrix'];
             $image = $donnees['ProjetPhoto'];
             $image2 = $donnees['ProjetPhoto2'];
-            $monimage1 = "." . $image . "_edited2.jpg";
-            $monimage2 = "." . $image2 . "_edited2.jpg";
+            $monimage1 = "." . $image . "_edited.jpg";
+            $monimage2 = "." . $image2 . "_edited.jpg";
 
             if (isset($_SESSION['listePanier'][$lib])) {
                 $_SESSION['listePanier'][$lib]['quantite'] += 1;
@@ -41,7 +41,9 @@
 
         }
         echo '<body onLoad="alert(\'Produit ajouté au panier !\')">';
-        echo '<meta http-equiv="refresh" content="0;URL=afficher_panier.php">';
+        echo '<meta http-equiv="refresh" content="0;URL=' . $_SERVER['HTTP_REFERER'] . '">';
+
+        mysqli_close($link);
     }
     else {
         echo "Erreur";

@@ -65,7 +65,7 @@
                     ' </ul> </li>
                     </a>';
                 echo "<ul> 
-                    <form method=\"POST\" action=\"../panier.php\">
+                    <form method=\"POST\" action=\"../panier.php\"  >
                         <input type=\"hidden\" name=\"lib_produit\" value=$libelle>
                         <li>Ajouter au panier <button type=\"submit\"> Ajout </button></li>
                     </form>
@@ -73,6 +73,7 @@
                 echo '<br>';
         }
         }
+        mysqli_close($link);
     }
    
 ?>

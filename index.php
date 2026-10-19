@@ -29,7 +29,8 @@
             </ul>
         </nav>
     </header>   
-    <!-- pas encore le bon logout -->
+    <a href="./afficher_panier.php" class='btn-fixe' > Panier</a>
+
     <a href="logout.php">Déconnexion</a>
 </body>
 </html>
