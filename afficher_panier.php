@@ -34,7 +34,7 @@
                 }
         echo "</tbody> </table>";
         echo "<form action=\"paiement.php\" method=\"POST\">
-                <input type=\"submit\" name=\"paiement\">
+                <input type=\"submit\" name=\"paiement\" value=\"payer\">
               </form>";
     }
     else {
