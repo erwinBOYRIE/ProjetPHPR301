@@ -3,12 +3,14 @@
     $quantite = $_POST['quantite'];
     $lib = $_POST['lib_produit'];
     if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) {
-        $quantiteMax = $_SESSION['listePanier'][$lib];
+        $quantiteMax = $_SESSION['listePanier'][$lib]['quantiteMax'];
         if ($quantite < $quantiteMax && $quantite != 0) {
             $_SESSION['listePanier'][$lib]['quantite'] = $quantite;
         }
         elseif ($quantite > $quantiteMax) {
-            echo "Impossible quantité max possible pour ce produit : $quantiteMax";
+            //pop-up
+            echo '<body onLoad="alert(\'Impossible de modifier, la quantité choisi dépasse la quantité en stock du produit\')">';
+            echo '<meta http-equiv="refresh" content="0;URL=afficher_panier.php">';
         } 
         elseif ($quantite == 0) {
             unset($_SESSION['listePanier'][$lib]);
