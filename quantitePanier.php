@@ -4,7 +4,7 @@
     $lib = $_POST['lib_produit'];
     if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) {
         $quantiteMax = $_SESSION['listePanier'][$lib]['quantiteMax'];
-        if ($quantite < $quantiteMax && $quantite != 0) {
+        if ($quantite <= $quantiteMax && $quantite != 0) {
             $_SESSION['listePanier'][$lib]['quantite'] = $quantite;
         }
         elseif ($quantite > $quantiteMax) {

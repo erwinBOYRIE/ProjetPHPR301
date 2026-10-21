@@ -43,8 +43,8 @@
 
                         </head>
                         <body>
-                        <div class= "item"> <a href="'. $imageDest.'"> <img src="'. $imageDest .'" alt="'.$imageDest.'"></a>
-                        <a href="'. $imageDest2.'"> <img src="'. $imageDest2 .'" alt="'.$imageDest2.'"></a>
+                        <div class= "item"> <a href="'. $imageSrc.'"> <img src="'. $imageDest .'" alt="'.$imageDest.'"></a>
+                        <a href="'. $imageSrc2.'"> <img src="'. $imageDest2 .'" alt="'.$imageDest2.'"></a>
                         <ul> <br>' .
                         '<li><p class = "nomBooster"> Nom du booster : ' . $libelle . '</p></li> ' . 
                         '<li><p class = "description">'. $description . '</li></p>' .
