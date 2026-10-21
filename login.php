@@ -25,12 +25,12 @@
             $_SESSION['pwd'] = $_POST['pwd'];
             $_SESSION['listePanier'] = array();
             // on redirige notre visiteur vers une page de notre section membre
-            header ('location: index.php');
+            header ('location: accueil.php');
         }
         else {
             echo '<body onLoad="alert(\'Login ou mot de passe incorrect !\')">';
             // puis on le redirige vers la page d'accueil
-            echo '<meta http-equiv="refresh" content="0;URL=accueil.html">';
+            echo '<meta http-equiv="refresh" content="0;URL=index.html">';
         }
     } 
     else {
