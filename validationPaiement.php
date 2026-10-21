@@ -5,10 +5,10 @@
        $dateExpi = $_POST['DateExpi'];
        if ($numCarte[0]==$numCarte[-1]) {
         $dateDuJ = new DateTime();
-        $dateDuJ->modify('+3 month');
-
-        if ($dateExpi>$dateDuJ) {
-            echo" caca";
+       // $dateDuJ->modify('+3 month');
+        
+        if ($dateExpiFormate>$dateDuJ) {
+            echo" Paiement Valide";
         }
 
        }
