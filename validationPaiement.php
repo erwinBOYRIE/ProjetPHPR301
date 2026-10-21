@@ -7,9 +7,8 @@
         $dateDuJ = new DateTime();
         $dateDuJ->modify('+3 month');
         $dateExpiFormate = new DateTime($dateExpi);
-        var_dump($dateExpiFormate);
         if ($dateExpiFormate>$dateDuJ) {
-            echo" Paiements Validé";
+            echo" Paiement Validé";
         }
 
        }
