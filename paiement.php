@@ -8,7 +8,7 @@
     echo "
     <form action=\"validationPaiement.php\" method=\"POST\">
         <input type=\"text\" name=\"NumCarte\" >
-        <input type=\"date\" name=\"DateExpi\">
+        <input type=\"text\" name=\"DateExpi\">
         <input type=\"submit\" name=\"validerPaiement\" value=\"Payer\">
     </form>";
 
