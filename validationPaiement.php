@@ -13,7 +13,7 @@
             
             if ($dateExpiFormatFinal && $dateExpiFormatFinal > $dateDuJ) {
                 echo "Paiement Validé <br>
-                <a href='./index.php'> Retour à l'accueil </a>";
+                <a href='./accueil.php'> Retour à l'accueil </a>";
             } else {
                 echo "Carte expirée ou date invalide <br>
                             <a href='./afficher_panier.php'> Retour Au panier </a>";
