@@ -23,9 +23,6 @@
                 <li>
                     <a href="./pages/wankul.php">Wankul</a>
                 </li>
-                <li>
-                    <a href="./afficher_panier.php">Panier</a>
-                </li>
             </ul>
         </nav>
     </header>   

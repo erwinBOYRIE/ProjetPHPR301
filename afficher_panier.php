@@ -3,7 +3,7 @@
     $panier = $_SESSION['listePanier'];
 
     echo "<h2>Votre panier </h2>";
-    echo "<a href=\"./index.php\">Retour à l'accueil</a> <br>";
+    echo "<a href=\"./accueil.php\">Retour à l'accueil</a> <br>";
 
     if (!empty($panier)) {
         echo "<table>

@@ -12,7 +12,7 @@
         <nav class="navbar">
             <ul>
                 <li>
-                    <a href="../index.php">Accueil</a>
+                    <a href="../accueil.php">Accueil</a>
                 </li>
                 <li>
                     <a href="./Pokemon.php">Pokemon</a>
