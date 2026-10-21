@@ -28,14 +28,14 @@
                             <td><form action="./quantitePanier.php" method="POST">
                                     <input type="hidden" name="lib_produit" value=' . $valeur['libelle'] . '>
                                     <input type="number" name="quantite" id="quantitePro">
-                                    <input type="submit" name="quantiteValidez">
+                                    <input type="submit" name="quantiteValidez" value="Modifier">
                                 </form>
                             </td>
                         </tr>';
                 }
-        echo "</tbody> </table>";
+        echo "</tbody> </table> <br>";
         echo "<form action=\"paiement.php\" method=\"POST\">
-                <input type=\"submit\" name=\"paiement\" value=\"payer\">
+                <input type=\"submit\" name=\"paiement\" value=\"Payer\">
               </form>";
     }
     else {

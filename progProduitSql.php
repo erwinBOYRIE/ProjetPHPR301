@@ -22,6 +22,7 @@
             $image = $donnees['ProjetPhoto'];
             $image2 = $donnees['ProjetPhoto2'];
             $categorie = $donnees['ProjetCategorie'];
+            $quantite = $donnees['ProjetQuantite'];
             
             if ($categorie == $cate) {
                 
@@ -47,7 +48,8 @@
                         <ul> <br>' .
                         '<li><p class = "nomBooster"> Nom du booster : ' . $libelle . '</p></li> ' . 
                         '<li><p class = "description">'. $description . '</li></p>' .
-                        '<li><p class = "prixBooster"> Prix du booster : ' . $prix . ' € </p> ' .  
+                        '<li><p class = "prixBooster"> Prix du booster : ' . $prix . ' € </p> ' . 
+                        '<li><p class = "quantiteBooster"> Quantité max du booster : ' . $quantite . '</p></li> ' . 
                         ' </ul> </div>    
                         </body>
                         </html>';                
@@ -62,6 +64,7 @@
                     <ul> <br>' .
                     '<li><p class = "nomBooster"> Nom du booster : ' . $libelle . '</p></li> ' . 
                     '<li><p class = "prixBooster"> Prix du booster : ' . $prix . ' € </p> ' .  
+                    '<li><p class = "quantiteBooster"> Quantité max du booster : ' . $quantite . '</p></li> ' .
                     ' </ul> </li>
                     </a>';
                 echo "<ul> 

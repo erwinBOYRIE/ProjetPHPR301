@@ -23,6 +23,7 @@
             $image2 = $donnees['ProjetPhoto2'];
             $monimage1 = "." . $image . "_edited.jpg";
             $monimage2 = "." . $image2 . "_edited.jpg";
+            $quantiteMax = $donnees['ProjetQuantite'];
 
             if (isset($_SESSION['listePanier'][$lib])) {
                 $_SESSION['listePanier'][$lib]['quantite'] += 1;
@@ -34,6 +35,7 @@
                     'image2' => $monimage2,
                     'prix' => $prix,
                     'quantite' => 1,
+                    'quantiteMax' => $quantiteMax
                 );
             }
 
