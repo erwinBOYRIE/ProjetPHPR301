@@ -12,8 +12,6 @@
     $link=mysqli_connect($host,$user,$pass,$bdd) or die( "Impossible de se connecter à la base de données");
     $link->set_charset("utf8mb4");
 
-
-
     
     if (isset($_POST['NumCarte']) && isset($_POST['DateExpi'])) {
        $numCarte = $_POST['NumCarte'];
@@ -23,9 +21,7 @@
             $dateDuJ = new DateTime();
             $dateDuJ->modify('+3 month');
 
-           
             $dateExpiFormatFinal = DateTime::createFromFormat('!m/y', $dateExpi);
-
             
             if ($dateExpiFormatFinal && $dateExpiFormatFinal > $dateDuJ) {
                 echo "Paiement Validé <br>
@@ -33,6 +29,12 @@
                 foreach ($panier as $key => $value) {
                     $query2 = "UPDATE $nomtable SET 'ProjetQuantite' = ". $value['quantiteMax'] -  $value['quantite'];
                     mysqli_query($link, $query2);
+                }
+
+                //test pour verifier si tout c'est bien passe
+                if (mysqli_connect_errno()) {
+                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                    exit();
                 }
 
             } else {

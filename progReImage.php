@@ -1,6 +1,6 @@
 <?php
 function redimage($img_src, $img_dest, $dst_w, $dst_h) {
-    // Si l'image éditée existe déjà, inutile de la ré-exécuter
+    //si l'image éditée existe déjà, inutile de la ré-exécuter
     if (file_exists($img_dest)) {
         return;
     }
@@ -23,8 +23,6 @@ function redimage($img_src, $img_dest, $dst_w, $dst_h) {
     if ($src_im && $dst_im) {
         imagecopyresampled($dst_im, $src_im, 0, 0, 0, 0, $dst_w, $dst_h, $src_w, $src_h);
         imagejpeg($dst_im, $img_dest, 85); // 85% de qualité pour un bon compromis poids/visuel
-
-
     }
 }
 ?>

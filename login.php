@@ -1,5 +1,5 @@
 <?php
-    // On definit un login et un mot de passe de base
+    // on definit un login et un mot de passe de base pour ADMIN et USER
     $login_valide_admin = "admin";
     $pwd_valide_admin = "adminpwd";
 
@@ -29,11 +29,11 @@
         }
         else {
             echo '<body onLoad="alert(\'Login ou mot de passe incorrect !\')">';
-            // puis on le redirige vers la page d'accueil
+            // puis on le redirige vers la page de connexion
             echo '<meta http-equiv="refresh" content="0;URL=index.html">';
         }
     } 
     else {
-    echo 'Les variables du formulaire ne sont pas declarees.';
+    echo 'Les variables du formulaire ne sont pas declarées.';
     }
 ?>

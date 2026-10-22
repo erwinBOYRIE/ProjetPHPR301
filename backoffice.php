@@ -44,6 +44,12 @@
         $query= "SELECT * FROM $nomtable";
         $result= mysqli_query($link, $query);
 
+        //test pour verifier si tout c'est bien passe
+        if (mysqli_connect_errno()) {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            exit();
+        }
+
         while ($donnees=mysqli_fetch_assoc($result)) {
             $libelle = $donnees['ProjetLibelle'];
             $description = $donnees['ProjetDescription'];
