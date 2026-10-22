@@ -1,6 +1,7 @@
 <?php
     session_start();
     $panier = $_SESSION['listePanier'];
+     echo '<head><link rel="stylesheet" href="./style.css"></head>';
 
 
     // BDD

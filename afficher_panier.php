@@ -1,7 +1,7 @@
 <?php
     session_start();
     $panier = $_SESSION['listePanier'];
-
+    echo '<head><link rel="stylesheet" href="./style.css"></head>';
     echo "<h2>Votre panier </h2>";
     echo "<a href=\"./accueil.php\">Retour à l'accueil</a> <br>";
 

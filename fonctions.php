@@ -106,22 +106,24 @@ function sql($cate) {
                 
                
 
-            //affichage des produits sur la page
-            echo '<a href="./'.$libelle.'.html">
-                <li class= "item"> <img src="'. $imageDest .'" alt="'.$imageDest.'">
-                <ul> <br>' .
-                '<li><p class = "nomBooster"> Nom du booster : ' . $libelle . '</p></li> ' . 
-                '<li><p class = "prixBooster"> Prix du booster : ' . $prix . ' € </p> ' .  
-                '<li><p class = "quantiteBooster"> Quantité max du booster : ' . $quantite . '</p></li> ' .
-                ' </ul> </li>
-                </a>';
-            echo "<ul> 
-                <form method=\"POST\" action=\"../panier.php\"  >
-                    <input type=\"hidden\" name=\"lib_produit\" value=\"$libelle\">
-                    <li>Ajouter au panier <button type=\"submit\"> Ajout </button></li>
-                </form>
-                </ul>";
-            echo '<br>';
+            // Affichage du produit et de son formulaire dans une seule carte.
+          
+            echo '<li class="produitCarte">
+                    <a class="produitLien" href="./'.$libelle.'.html">
+                        <article class="item">
+                            <img src="'. $imageDest .'" alt="'.$libelle.'">
+                            <div class="produitInfos">
+                                <p class="nomBooster"> '. $libelle . '</p>
+                                <p class="prixBooster"> ' . $prix . ' € </p>
+                                <p class="quantiteBooster">Quantité disponible : ' . $quantite . '</p>
+                            </div>
+                        </article>
+                    </a>
+                    <form class="formAjoutProduit" method="POST" action="../panier.php">
+                        <input type="hidden" name="lib_produit" value="'.$libelle.'">
+                        <button type="submit" name="quantiteValidez">Ajouter au panier</button>
+                    </form>
+                  </li>';
         }
     }
     mysqli_close($link);
