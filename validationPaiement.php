@@ -1,4 +1,20 @@
 <?php
+    session_start();
+    $panier = $_SESSION['listePanier'];
+
+
+    // BDD
+    $bdd= "mpinkowski_bd"; //nom bd
+    $host= "lakartxela.iutbayonne.univ-pau.fr";
+    $user= "mpinkowski_bd"; //identifiant
+    $pass= "mpinkowski_bd"; //mdp
+    $nomtable= "ProjetR301_Produit";/* Connection bdd */
+    $link=mysqli_connect($host,$user,$pass,$bdd) or die( "Impossible de se connecter à la base de données");
+    $link->set_charset("utf8mb4");
+
+
+
+    
     if (isset($_POST['NumCarte']) && isset($_POST['DateExpi'])) {
        $numCarte = $_POST['NumCarte'];
        $dateExpi = $_POST['DateExpi']; 
@@ -14,6 +30,11 @@
             if ($dateExpiFormatFinal && $dateExpiFormatFinal > $dateDuJ) {
                 echo "Paiement Validé <br>
                 <a href='./accueil.php'> Retour à l'accueil </a>";
+                foreach ($panier as $key => $value) {
+                    $query2 = "UPDATE $nomtable SET 'ProjetQuantite' = ". $value['quantiteMax'] -  $value['quantite'];
+                    mysqli_query($link, $query2);
+                }
+
             } else {
                 echo "Carte expirée ou date invalide <br>
                             <a href='./afficher_panier.php'> Retour Au panier </a>";
@@ -28,4 +49,5 @@
         echo "Veuillez remplir toute les informations Merci <br>
         <a href='./afficher_panier.php'> Retour Au panier </a>";
     }
+    mysqli_close($link);
 ?>
