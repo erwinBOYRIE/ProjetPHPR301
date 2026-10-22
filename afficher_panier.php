@@ -26,7 +26,7 @@
                             <td>' . $valeur['prix'] . '</td>
                             <td> ' . $valeur['quantite'] . '</td>
                             <td><form action="./quantitePanier.php" method="POST">
-                                    <input type="hidden" name="lib_produit" value=' . $valeur['libelle'] . '>
+                                    <input type="hidden" name="lib_produit" value="' . $valeur['libelle'] . '">
                                     <input type="number" name="quantite" id="quantitePro">
                                     <input type="submit" name="quantiteValidez" value="Modifier">
                                 </form>

@@ -30,7 +30,7 @@
                     $query2 = "UPDATE $nomtable SET ProjetQuantite = (" . ($value['quantiteMax'] - $value['quantite']) . ")
                     WHERE ProjetLibelle = '" . $value['libelle'] . "';";
                     mysqli_query($link, $query2);
-                    unset($value['libelle']);
+                    unset($_SESSION['listePanier'][$value['libelle']]);
                 }
 
                 //test pour verifier si tout c'est bien passe

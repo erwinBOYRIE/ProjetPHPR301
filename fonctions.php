@@ -91,8 +91,13 @@ function sql($cate) {
                         '<li><p class = "nomBooster"> Nom du booster : ' . $libelle . '</p></li> ' . 
                         '<li><p class = "description">'. $description . '</li></p>' .
                         '<li><p class = "prixBooster"> Prix du booster : ' . $prix . ' € </p> ' . 
-                        '<li><p class = "quantiteBooster"> Quantité max du booster : ' . $quantite . '</p></li> ' . 
-                        ' </ul> </div>    
+                        '<li><p class = "quantiteBooster"> Quantité max du booster : ' . $quantite . '</p></li> ' .
+                        '<form action="../panier.php" method="POST">
+                        <input type="hidden" name="lib_produit" value="'.$libelle.'">
+                        <input type="number" name="quantite">
+                        <input type="submit" name="quantiteValidez" value="Modifier">
+                        </form>
+                         </ul> </div>    
                     </body>
                     </html>';                
             //création page individuelle
@@ -120,3 +125,5 @@ function sql($cate) {
     }
     mysqli_close($link);
 }
+?>
+

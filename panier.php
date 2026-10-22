@@ -1,6 +1,7 @@
 <?php
     session_start();
     $lib = $_POST['lib_produit'];
+    $quantite = $_POST['quantite'];
     $tabDonnee = array();
     
     if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) {
@@ -36,14 +37,27 @@
                 $_SESSION['listePanier'][$lib]['quantite'] += 1;
             }
             else {
-                $_SESSION['listePanier'][$lib] = array(
+                if (isset($quantite)) {
+                    $_SESSION['listePanier'][$lib] = array(
+                    'libelle'=> $libelle,
+                    'image' => $monimage1,
+                    'image2' => $monimage2,
+                    'prix' => $prix,
+                    'quantite' => $quantite,
+                    'quantiteMax' => $quantiteMax
+                );
+                }
+                else {
+                    $_SESSION['listePanier'][$lib] = array(
                     'libelle'=> $libelle,
                     'image' => $monimage1,
                     'image2' => $monimage2,
                     'prix' => $prix,
                     'quantite' => 1,
                     'quantiteMax' => $quantiteMax
-                );
+                    );
+                }
+                
             }
 
         }
