@@ -31,6 +31,12 @@
                                     <input type="submit" name="quantiteValidez" value="Modifier">
                                 </form>
                             </td>
+                            <td><form action="./quantitePanier.php" method="POST">
+                                    <input type="hidden" name="lib_produit" value="' . $valeur['libelle'] . '">
+                                    <input type="hidden" name="quantite" id="quantitePro" value=0>
+                                    <input type="submit" name="quantiteValidez" value="Supprimer">
+                                </form>
+                            </td>
                         </tr>';
                 }
         echo "</tbody> </table> <br>";

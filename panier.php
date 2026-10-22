@@ -38,14 +38,21 @@
             }
             else {
                 if (isset($quantite)) {
-                    $_SESSION['listePanier'][$lib] = array(
+                    if ($quantiteMax >= $quantite ) {
+                        $_SESSION['listePanier'][$lib] = array(
                     'libelle'=> $libelle,
                     'image' => $monimage1,
                     'image2' => $monimage2,
                     'prix' => $prix,
                     'quantite' => $quantite,
-                    'quantiteMax' => $quantiteMax
-                );
+                    'quantiteMax' => $quantiteMax);
+
+                    }
+                    else {
+                        echo "<body onLoad=\"alert('Impossible de modifier la quantité. Quantité max : $quantiteMax ' )\">";
+                        echo '<meta http-equiv="refresh" content="0;URL=' . $_SERVER['HTTP_REFERER'] . '">';
+                    }
+                
                 }
                 else {
                     $_SESSION['listePanier'][$lib] = array(

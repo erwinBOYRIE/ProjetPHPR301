@@ -95,7 +95,7 @@ function sql($cate) {
                         '<form action="../panier.php" method="POST">
                         <input type="hidden" name="lib_produit" value="'.$libelle.'">
                         <input type="number" name="quantite">
-                        <input type="submit" name="quantiteValidez" value="Modifier">
+                        <input type="submit" name="quantiteValidez" value="Ajouter au panier">
                         </form>
                          </ul> </div>    
                         <a href="'. $categorie.'.php" class="btn-fixe" > Retour en arriere</a>     

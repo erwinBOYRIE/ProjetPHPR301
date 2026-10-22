@@ -11,6 +11,12 @@
                     <body>
                         <div class= "item"> <a href="../images/wankul/Collection-Stellar.jpg"> <img src="../images/wankul/Collection-Stellar_edited.jpg" alt="../images/wankul/Collection-Stellar_edited.jpg"></a>
                         <a href="../images/wankul/Collection-Stellar2.jpg"> <img src="../images/wankul/Collection-Stellar2_edited.jpg" alt="../images/wankul/Collection-Stellar2_edited.jpg"></a>
-                        <ul> <br><li><p class = "nomBooster"> Nom du booster : Stellar</p></li> <li><p class = "description">Booster Wankul de la collection Stellar </li></p><li><p class = "prixBooster"> Prix du booster : 15.99 € </p> <li><p class = "quantiteBooster"> Quantité max du booster : 9</p></li>  </ul> </div>    
+                        <ul> <br><li><p class = "nomBooster"> Nom du booster : Stellar</p></li> <li><p class = "description">Booster Wankul de la collection Stellar </li></p><li><p class = "prixBooster"> Prix du booster : 15.99 € </p> <li><p class = "quantiteBooster"> Quantité max du booster : 9</p></li> <form action="../panier.php" method="POST">
+                        <input type="hidden" name="lib_produit" value="Stellar">
+                        <input type="number" name="quantite">
+                        <input type="submit" name="quantiteValidez" value="Ajouter au panier">
+                        </form>
+                         </ul> </div>    
+                        <a href="wankul.php" class="btn-fixe" > Retour en arriere</a>     
                     </body>
                     </html>
