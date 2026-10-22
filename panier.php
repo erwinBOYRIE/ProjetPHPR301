@@ -6,18 +6,9 @@
     if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) {
         //connexion bd
         $bdd= "mpinkowski_bd"; //nom bd
-<<<<<<< HEAD
-        $host= "localhost";
-        //$host= "lakartxela.iutbayonne.univ-pau.fr";
-        //$user= "mpinkowski_bd"; //identifiant
-        $user= "root"; //identifiant ---
-        $pass= ""; //mdp
-        //$pass= "mpinkowski_bd"; //mdp
-=======
         $host= "lakartxela.iutbayonne.univ-pau.fr";
         $user= "mpinkowski_bd"; //identifiant
         $pass= "mpinkowski_bd"; //mdp
->>>>>>> f58512eb5578916936c5a20b49d73370758ee163
         $nomtable= "ProjetR301_Produit"; /* Connection bdd */
 
         $link=mysqli_connect($host,$user,$pass,$bdd) or die( "Impossible de se connecter à la base de données");

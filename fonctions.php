@@ -48,7 +48,7 @@ function sql($cate) {
     $link=mysqli_connect($host,$user,$pass,$bdd) or die( "Impossible de se connecter à la base de données");
     $link->set_charset("utf8mb4");
 
-    $query= "SELECT * FROM $nomtable";
+    $query= "SELECT * FROM $nomtable WHERE ProjetQuantite >0";
     $result= mysqli_query($link, $query);
 
     //test pour verifier si tout c'est bien passe

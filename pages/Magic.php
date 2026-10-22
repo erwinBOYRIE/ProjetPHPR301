@@ -32,11 +32,7 @@
     </header>
     <ul class = "listeItems">
         <?php
-<<<<<<< HEAD
-            include_once('../progProduitSql.php');
-=======
             include_once('../fonctions.php');
->>>>>>> f58512eb5578916936c5a20b49d73370758ee163
             sql('magic');
         ?>
     </ul>

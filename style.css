@@ -37,7 +37,6 @@ td {
     padding : 5px; 
 }
 .btn-fixe {
-<<<<<<< HEAD
             position: fixed;
             bottom: 20px;  /* Distance par rapport au bas de la fenêtre */
             right: 20px;   /* Distance par rapport à la droite */
@@ -56,23 +55,3 @@ td {
         .btn-fixe:hover {
             background-color: #0056b3;
         }
-=======
-    position: fixed;
-    bottom: 20px;  /* Distance par rapport au bas de la fenêtre */
-    right: 20px;   /* Distance par rapport à la droite */
-    z-index: 1000; /* S'assure que le bouton reste au-dessus du reste du contenu */
-            
-    /* Style visuel du bouton (optionnel) */
-    padding: 12px 24px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.btn-fixe:hover {
-    background-color: #0056b3;
-}
->>>>>>> f58512eb5578916936c5a20b49d73370758ee163

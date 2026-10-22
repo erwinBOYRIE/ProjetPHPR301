@@ -1,12 +1,12 @@
 <?php
     // BDD
         $bdd= "mpinkowski_bd"; //nom bd
-        //$host= "lakartxela.iutbayonne.univ-pau.fr";
-        $host= "localhost";
-        $user="root"; //identifiant
-        $pass=""; //mdp
-        //$user= "mpinkowski_bd"; //identifiant
-        //$pass= "mpinkowski_bd"; //mdp
+        $host= "lakartxela.iutbayonne.univ-pau.fr";
+        //$host= "localhost";
+        //$user="root"; //identifiant
+        //$pass=""; //mdp
+        $user= "mpinkowski_bd"; //identifiant
+        $pass= "mpinkowski_bd"; //mdp
 
 
     $nomtable= "ProjetR301_Produit"; /* Connection bdd */

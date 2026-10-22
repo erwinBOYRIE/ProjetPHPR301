@@ -9,11 +9,7 @@
         }
         elseif ($quantite > $quantiteMax) {
             //pop-up
-<<<<<<< HEAD
-            echo '<body onLoad="alert(\'Impossible de modifier, la quantité choisi dépasse la quantité en stock du produit\')">';
-=======
             echo "<body onLoad=\"alert('Impossible de modifier la quantité. Quantité max : $quantiteMax ' )\">";
->>>>>>> f58512eb5578916936c5a20b49d73370758ee163
             //redirection vers le panier
             echo '<meta http-equiv="refresh" content="0;URL=afficher_panier.php">';
         } 
