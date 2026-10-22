@@ -5,12 +5,18 @@
 
     // BDD
     $bdd= "mpinkowski_bd"; //nom bd
+<<<<<<< HEAD
     //$host= "lakartxela.iutbayonne.univ-pau.fr";
     $host= "localhost";
     $user="root"; //identifiant
     $pass=""; //mdp
     //$user= "mpinkowski_bd"; //identifiant
     //$pass= "mpinkowski_bd"; //mdp
+=======
+    $host= "lakartxela.iutbayonne.univ-pau.fr";
+    $user= "mpinkowski_bd"; //identifiant
+    $pass= "mpinkowski_bd"; //mdp
+>>>>>>> f58512eb5578916936c5a20b49d73370758ee163
     $nomtable= "ProjetR301_Produit";/* Connection bdd */
     $link=mysqli_connect($host,$user,$pass,$bdd) or die( "Impossible de se connecter à la base de données");
     $link->set_charset("utf8mb4");
@@ -33,7 +39,11 @@
                     $query2 = "UPDATE $nomtable SET ProjetQuantite = (" . ($value['quantiteMax'] - $value['quantite']) . ")
                     WHERE ProjetLibelle = '" . $value['libelle'] . "';";
                     mysqli_query($link, $query2);
+<<<<<<< HEAD
                     unset($value['libelle']);
+=======
+                    unset($value);
+>>>>>>> f58512eb5578916936c5a20b49d73370758ee163
                 }
 
                 //test pour verifier si tout c'est bien passe

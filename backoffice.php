@@ -28,6 +28,7 @@
             </thead>
             <tbody>";
 
+<<<<<<< HEAD
 
         // BDD
         $bdd= "mpinkowski_bd"; //nom bd
@@ -38,6 +39,14 @@
         //$user= "mpinkowski_bd"; //identifiant
         //$pass= "mpinkowski_bd"; //mdp
         include_once('./progReImage.php');
+=======
+        //connexion bd
+        $bdd= "mpinkowski_bd"; //nom bd
+        $host= "lakartxela.iutbayonne.univ-pau.fr";
+        $user= "mpinkowski_bd"; //identifiant
+        $pass= "mpinkowski_bd"; //mdp
+        include_once('./fonctions.php');
+>>>>>>> f58512eb5578916936c5a20b49d73370758ee163
 
         $nomtable= "ProjetR301_Produit"; /* Connection bdd */
         //print "Tentative de connexion sur sitebd<br>";
@@ -71,6 +80,7 @@
                     <td>$description</td>
                     <td>$categorie</td>
                     <td>$prix €</td>
+<<<<<<< HEAD
                     <td> 
                         <form method=\"POST\" action=\"./modifQuantite_Prod.php\">
                             <input type=\"hidden\" name=\"lib_produit\" value='$libelle'>
@@ -78,6 +88,9 @@
                             <button type=\"submit\">Modifier la quantité</button>
                         </form>
                     </td>
+=======
+                    <td>$quantite</td>
+>>>>>>> f58512eb5578916936c5a20b49d73370758ee163
                     <td>
                         <form method=\"POST\" action=\"./suppr_prod.php\">
                             <input type=\"hidden\" name=\"lib_produit\" value='$libelle'>
