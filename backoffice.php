@@ -8,7 +8,11 @@
 </head>
 <body>
     <h2>Liste des produits</h2>
+    <a href="./logout.php">Déconnexion</a>
+    <br>
+
     <?php 
+        echo "<br>";
         echo "<table>
             <thead>
                 <tr>
@@ -18,6 +22,7 @@
                     <th scope=\"col\">Description</th>
                     <th scope=\"col\">Catégorie</th>
                     <th scope=\"col\">Prix</th>
+                    <th scope=\"col\">Quantite</th>
                     <th scope=\"col\">Supprimer un produit ?</th>
                 </tr>
             </thead>
@@ -46,6 +51,7 @@
             $image = $donnees['ProjetPhoto'];
             $image2 = $donnees['ProjetPhoto2'];
             $categorie = $donnees['ProjetCategorie'];
+            $quantite = $donnees['ProjetQuantite'];
             $monimage1 = "." . $image . "_edited.jpg";
             $monimage2 = "." . $image2 . "_edited.jpg";
             echo"<tr>
@@ -55,6 +61,7 @@
                     <td>$description</td>
                     <td>$categorie</td>
                     <td>$prix €</td>
+                    <td>$quantite</td>
                     <td>
                         <form method=\"POST\" action=\"./suppr_prod.php\">
                             <input type=\"hidden\" name=\"lib_produit\" value='$libelle'>
@@ -81,13 +88,13 @@
         <input name="prix" type="number"> <br>
         <label>Categorie du produit : </label>
         <input name="cath" type="text"> <br>
+        <label>Quantité en stock du produit : </label>
+        <input name="quant" type="number"> <br>
         <label>Photo 1 du produit : </label>
         <input name="photo1" type="text"> <br>
         <label>Photo 2 du produit : </label>
         <input name="photo2" type="text"> <br>
         <input type="submit" value="Validez">
     </form>
-    <br>
-    <a href="./logout.php">Déconnexion</a>
 </body>
 </html>
