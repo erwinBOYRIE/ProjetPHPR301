@@ -17,7 +17,7 @@
        $numCarte = $_POST['NumCarte'];
        $dateExpi = $_POST['DateExpi']; 
 
-       if ($numCarte[0] == $numCarte[-1] $$ strlen($numCarte)==16) {
+       if ($numCarte[0] == $numCarte[-1] && strlen($numCarte)==16) {
             $dateDuJ = new DateTime();
             $dateDuJ->modify('+3 month');
 
