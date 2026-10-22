@@ -98,6 +98,7 @@ function sql($cate) {
                         <input type="submit" name="quantiteValidez" value="Modifier">
                         </form>
                          </ul> </div>    
+                        <a href="'. $categorie.'.php" class="btn-fixe" > Retour en arriere</a>     
                     </body>
                     </html>';                
             //création page individuelle
