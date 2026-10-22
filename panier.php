@@ -2,6 +2,7 @@
     session_start();
     $lib = $_POST['lib_produit'];
     $tabDonnee = array();
+    
     if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) {
         //connexion bd
         $bdd= "mpinkowski_bd"; //nom bd
@@ -15,6 +16,12 @@
 
         $query= "SELECT * FROM $nomtable WHERE ProjetLibelle LIKE '$lib%'";
         $result= mysqli_query($link, $query);
+
+        //test pour verifier si tout c'est bien passe
+        if (mysqli_connect_errno()) {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            exit();
+        }
 
         while ($donnees=mysqli_fetch_assoc($result)) {
             $libelle = $donnees['ProjetLibelle'];

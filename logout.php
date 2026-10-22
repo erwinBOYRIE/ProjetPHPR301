@@ -8,6 +8,6 @@
     // On détruit notre session
     session_destroy ();
 
-    // On redirige le visiteur vers la page d'accueil
+    // On redirige le visiteur vers la page de connexion
     header ('location: index.html');
 ?>

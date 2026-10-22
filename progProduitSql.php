@@ -1,4 +1,6 @@
 <?php
+//fonction d'affichage des produits à partir de la base de donnée
+//avec aussi la création de pages individuelles des produits
     function sql($cate) {
         $bdd= "mpinkowski_bd"; //nom bd
         $host= "lakartxela.iutbayonne.univ-pau.fr";
@@ -14,6 +16,12 @@
 
         $query= "SELECT * FROM $nomtable";
         $result= mysqli_query($link, $query);
+
+        //test pour verifier si tout c'est bien passe
+        if (mysqli_connect_errno()) {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            exit();
+        }
 
         while ($donnees=mysqli_fetch_assoc($result)) {
             $libelle = $donnees['ProjetLibelle'];
@@ -53,7 +61,7 @@
                         ' </ul> </div>    
                         </body>
                         </html>';                
-
+                //création page individuelle
                 createPage($libelle.'.html',$html);
                 
                

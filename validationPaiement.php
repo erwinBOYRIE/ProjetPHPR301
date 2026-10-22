@@ -12,8 +12,6 @@
     $link=mysqli_connect($host,$user,$pass,$bdd) or die( "Impossible de se connecter à la base de données");
     $link->set_charset("utf8mb4");
 
-
-
     
     if (isset($_POST['NumCarte']) && isset($_POST['DateExpi'])) {
        $numCarte = $_POST['NumCarte'];
@@ -21,8 +19,15 @@
 
        if ($numCarte[0] == $numCarte[-1]) {
             $dateDuJ = new DateTime();
+<<<<<<< HEAD
             $dateDuJ->modify('+3 month')
             $dateExpiFormatFinal = DateTime::createFromFormat('!m/y', $dateExpi);
+=======
+            $dateDuJ->modify('+3 month');
+
+            $dateExpiFormatFinal = DateTime::createFromFormat('!m/y', $dateExpi);
+            
+>>>>>>> 83eadba41f3e02daa29404384f953efbf7cdf188
             if ($dateExpiFormatFinal && $dateExpiFormatFinal > $dateDuJ) {
                 echo "Paiement Validé <br>
                 <a href='./accueil.php'> Retour à l'accueil </a>";
@@ -31,6 +36,12 @@
                     WHERE ProjetLibelle = '" . $value['libelle'] . "';";
                     mysqli_query($link, $query2);
                     unset($value);
+                }
+
+                //test pour verifier si tout c'est bien passe
+                if (mysqli_connect_errno()) {
+                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                    exit();
                 }
 
             } else {
