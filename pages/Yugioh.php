@@ -32,8 +32,7 @@
     </header>
     <ul class = "listeItems">
         <?php
-            include_once('../progProduitSql.php');
-            include_once('../progReImage.php');
+            include_once('../fonctions.php');
             sql('yugioh');
         ?>
     </ul>

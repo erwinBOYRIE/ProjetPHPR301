@@ -33,7 +33,7 @@
         $host= "lakartxela.iutbayonne.univ-pau.fr";
         $user= "mpinkowski_bd"; //identifiant
         $pass= "mpinkowski_bd"; //mdp
-        include_once('./progReImage.php');
+        include_once('./fonctions.php');
 
         $nomtable= "ProjetR301_Produit"; /* Connection bdd */
         //print "Tentative de connexion sur sitebd<br>";
