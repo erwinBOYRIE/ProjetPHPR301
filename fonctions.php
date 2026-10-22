@@ -40,7 +40,8 @@ function sql($cate) {
 
     // include_once('../progReImage.php');
     // include_once('../progCreationPage.php');
-    
+    //include_once('../fonctions.php');
+
     $nomtable= "ProjetR301_Produit"; /* Connection bdd */
     //print "Tentative de connexion sur sitebd<br>";
 

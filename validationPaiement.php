@@ -19,15 +19,10 @@
 
        if ($numCarte[0] == $numCarte[-1]) {
             $dateDuJ = new DateTime();
-<<<<<<< HEAD
-            $dateDuJ->modify('+3 month')
-            $dateExpiFormatFinal = DateTime::createFromFormat('!m/y', $dateExpi);
-=======
             $dateDuJ->modify('+3 month');
 
             $dateExpiFormatFinal = DateTime::createFromFormat('!m/y', $dateExpi);
             
->>>>>>> 83eadba41f3e02daa29404384f953efbf7cdf188
             if ($dateExpiFormatFinal && $dateExpiFormatFinal > $dateDuJ) {
                 echo "Paiement Validé <br>
                 <a href='./accueil.php'> Retour à l'accueil </a>";
