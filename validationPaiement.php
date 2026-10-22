@@ -21,18 +21,16 @@
 
        if ($numCarte[0] == $numCarte[-1]) {
             $dateDuJ = new DateTime();
-            $dateDuJ->modify('+3 month');
-
-           
+            $dateDuJ->modify('+3 month')
             $dateExpiFormatFinal = DateTime::createFromFormat('!m/y', $dateExpi);
-
-            
             if ($dateExpiFormatFinal && $dateExpiFormatFinal > $dateDuJ) {
                 echo "Paiement Validé <br>
                 <a href='./accueil.php'> Retour à l'accueil </a>";
                 foreach ($panier as $key => $value) {
-                    $query2 = "UPDATE $nomtable SET 'ProjetQuantite' = ". $value['quantiteMax'] -  $value['quantite'];
+                    $query2 = "UPDATE $nomtable SET ProjetQuantite = (" . ($value['quantiteMax'] - $value['quantite']) . ")
+                    WHERE ProjetLibelle = '" . $value['libelle'] . "';";
                     mysqli_query($link, $query2);
+                    unset($value);
                 }
 
             } else {
